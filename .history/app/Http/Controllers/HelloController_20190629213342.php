@@ -13,27 +13,20 @@ class HelloController extends Controller
         $data = Blog::all();
         return view('hello' , ['blogs' => $data]);
     }
-    
-    public function insert()
-    {
-        return view('insert');
-    }
 
     public function show($id)
     {
         $blog = Blog::find($id);
         return view('single',['data' => $blog]);
     }
+
+    public function insert()
+    {
+        return view('insert');
+    }
     
     public function process_add(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'tempat' => 'required',
-            'tahun' => 'required',
-            'jurusan' => 'required'
-        ]);
-
        Blog::create(
             [
                 'nama' => $request->name,

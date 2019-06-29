@@ -27,6 +27,9 @@ class HelloController extends Controller
     
     public function process_add(Request $request)
     {
+        $message = [
+            'required' => ':attribute Belum Di isi'
+        ]
         $this->validate($request, [
             'name' => 'required',
             'tempat' => 'required',

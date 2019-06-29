@@ -27,11 +27,15 @@ class HelloController extends Controller
     
     public function process_add(Request $request)
     {
+        $message = [
+            'required' => ':attribute Belum di isi'
+        ];
+
         $this->validate($request, [
-            'name' => 'required',
-            'tempat' => 'required',
-            'tahun' => 'required',
-            'jurusan' => 'required'
+            'name' => $message,
+            'tempat' => $message,
+            'tahun' => $message,
+            'jurusan' => $message
         ]);
 
        Blog::create(

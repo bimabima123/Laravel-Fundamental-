@@ -24,6 +24,7 @@ class HelloController extends Controller
         $blog = Blog::find($id);
         return view('single',['data' => $blog]);
     }
+
     
     public function process_add(Request $request)
     {

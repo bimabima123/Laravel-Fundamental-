@@ -11,9 +11,9 @@
   @endif
   <form action="process_add" method="post">
     <input type="text" name="name" value="{{ old('name') }}" placeholder="Nama Sekolah"><br>
-    <input type="text" name="tempat" value="{{ old('tempat') }}" placeholder="Lokasi Sekolah"><br>
-    <input type="text" name="tahun" value="{{ old('tahun') }}" placeholder="Tahun Kelulusan"><br>
-    <input type="text" name="jurusan" value="{{ old('jurusan') }}" placeholder="Nama Jurusan"><br>
+    <input type="text" name="tempat" value="" placeholder="Lokasi Sekolah"><br>
+    <input type="text" name="tahun" value="" placeholder="Tahun Kelulusan"><br>
+    <input type="text" name="jurusan" value="" placeholder="Nama Jurusan"><br>
 
     <input type="submit" name="button" value="Tambah"/>
     {{ csrf_field() }}    

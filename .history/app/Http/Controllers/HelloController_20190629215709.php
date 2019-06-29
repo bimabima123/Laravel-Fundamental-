@@ -22,8 +22,10 @@ class HelloController extends Controller
     public function show($id)
     {
         $blog = Blog::find($id);
+        // dd($blog);
         return view('single',['data' => $blog]);
     }
+
     
     public function process_add(Request $request)
     {

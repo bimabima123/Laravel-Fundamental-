@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Route::get('/hello', 'HelloController@index');
 Route::get('/hello/add', 'HelloController@insert');
-Route::get('/hello/{id}', 'HelloController@show');
 Route::post('/hello/process_add','HelloController@process_add');
+Route::get('/hello/{id}', 'HelloController@show');
 Route::get('/hello/{id}/edit', 'HelloController@edit');
 Route::put('/hello/{id}', 'HelloController@update');
 Route::get('/hello/destroy/{id}', 'HelloController@destroy');
